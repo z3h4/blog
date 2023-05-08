@@ -1,0 +1,6 @@
+<h1>Edit Blog Post</h1>
+<%= render partial: 'form', locals: { blog_post: @blog_post } %>
+
+<!--button_to generates a button inside a form. By default form method is set to post.-->
+<!--For delete operation we need to change it to delete.-->
+<%= button_to 'Delete', @blog_post, method: :delete, data: { turbo_confirm: 'Are you sure?' } %>
