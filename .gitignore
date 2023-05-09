@@ -36,3 +36,6 @@
 
 # Ignore the IntelliJ configuration files
 .idea/
+
+/app/assets/builds/*
+!/app/assets/builds/.keep
