@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   root "blog_posts#index"
 
   # If we name the route using `as`, we can then reference the route using blog_post_path

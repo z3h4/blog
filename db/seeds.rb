@@ -6,5 +6,11 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
-BlogPost.create(title: 'First Post', body: 'This is my very first blog post.')
-BlogPost.create(title: 'Second Post', body: 'This is my second blog post.')
+
+
+
+user = User.where(email: 'abc@def.com').first_or_initialize
+user.update!(password: 'password', password_confirmation: 'password')
+
+BlogPost.where(title: 'First Post').first_or_create!(body: 'This is my very first blog post.')
+BlogPost.where(title: 'Second Post').first_or_create!(body: 'This is my second blog post.')
